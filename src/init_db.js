@@ -1,5 +1,8 @@
 'use strict';
 
+require('dotenv').config();
+const readline = require('readline');
+
 {
   'anuncios'[
     {
