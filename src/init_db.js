@@ -4,13 +4,13 @@ require('dotenv').config();
 const readline = require('readline');
 
 {
-  'anuncios'[
+  'advert'[
     {
-      nombre: Bicileta,
-      venta: true,
-      precio: 230.15,
-      foto: bici.jpg,
-      tags: ['lifestyle', 'motor'],
+      name: 'computer',
+      send: true,
+      cost: 789.69,
+      photo: 'computer.jpg',
+      tags: ['tecnology', 'developer'],
     }
   ];
 }
