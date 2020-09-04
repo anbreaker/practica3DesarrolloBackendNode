@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const multer = require('multer');
 const path = require('path');
+const uuid = require('uuid');
 
 // Initializations
 const app = express();
@@ -47,12 +48,21 @@ app.use(express.urlencoded({extended: false}));
 // Config Express Data
 app.use(express.json());
 
+// Routes
+app.use('/api/advert', require('./routes/routes'));
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'html');
+app.engine('html', require('ejs').__express);
+
+// Static files
+// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'views')));
+
 // Start the server
 app.listen(app.get('port'), () => {
   console.log('Server on por', app.get('port'));
 });
-
-// Routes
-app.use(require('./routes/routes'));
 
 module.exports = app;
