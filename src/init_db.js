@@ -32,7 +32,7 @@ async function initAdverts() {
   // Init Documents
   console.log('Loads Adverts...');
   const result = await Advert.insertMany([
-    ({
+    {
       name: 'computer',
       onSale: true,
       cost: 789.69,
@@ -45,7 +45,14 @@ async function initAdverts() {
       cost: 89,
       imagePath: 'oneplus.jpg',
       tags: ['tecnology', 'lifestyle'],
-    }),
+    },
+    {
+      name: 'NIKON D610',
+      onSale: true,
+      cost: 707.99,
+      imagePath: 'nikon.jpg',
+      tags: ['tecnology', 'lifestyle'],
+    },
   ]);
 }
 
