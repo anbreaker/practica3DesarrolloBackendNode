@@ -2,12 +2,25 @@
 
 const {Schema, model} = require('mongoose');
 
-const advertSchema = Mongoose.Schema(
+const advertSchema = new Schema(
   {
-    name: {String, index: true, require: true},
-    onSale: {Boolean, require: true},
-    cost: {Number, require: true},
-    imagePath: {String, require: true},
+    name: {
+      type: String,
+      index: true,
+      required: true,
+    },
+    onSale: {
+      type: Boolean,
+      required: true,
+    },
+    cost: {
+      type: Number,
+      required: true,
+    },
+    imagePath: {
+      type: String,
+      required: true,
+    },
     tags: ['tecnology', 'developer', 'work', 'lifestyle'],
   },
   {
@@ -16,4 +29,4 @@ const advertSchema = Mongoose.Schema(
   }
 );
 
-module.exports = model(adevert, advertSchema);
+module.exports = model('advert', advertSchema);

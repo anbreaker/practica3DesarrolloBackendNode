@@ -1,18 +1,11 @@
 const {Router} = require('express');
 const router = Router();
 
-router.get('/', (req, res, next) => {
-  res.json({text: 'hello world'});
-  // res.send('hola mundo!');
-});
+const Advert = require('../models/Advert');
 
-router.get('/paramenruta/:etiqueta', (req, res, next) => {
-  console.log(req.params);
-  res.send('ok');
-});
-router.get('/paramenruta/:para?', (req, res, next) => {
-  console.log(req.params);
-  res.send('ok 2');
+router.get('/api/advert', async (req, res, next) => {
+  const advertsList = await Advert.find();
+  res.json(advertsList);
 });
 
 module.exports = router;
