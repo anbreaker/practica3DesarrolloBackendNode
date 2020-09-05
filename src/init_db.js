@@ -8,7 +8,7 @@ const Advert = require('./models/Advert');
 
 conn.once('open', async () => {
   try {
-    const response = await askUser('Are you sure want to initialize DataBase? (y/n)');
+    const response = await askUser('Are you sure want to initialize DataBase? (y/n)\n');
 
     if (response.toLowerCase() !== 'y') {
       console.log('Process is aborted.');
@@ -34,16 +34,16 @@ async function initAdverts() {
   const result = await Advert.insertMany([
     ({
       name: 'computer',
-      sale: true,
+      onSale: true,
       cost: 789.69,
-      photo: 'computer.jpg',
+      imagePath: 'computer.jpg',
       tags: ['tecnology', 'developer', 'work'],
     },
     {
       name: 'OnePlus 8',
-      sale: false,
+      onSale: false,
       cost: 89,
-      photo: 'oneplus.jpg',
+      imagePath: 'oneplus.jpg',
       tags: ['tecnology', 'lifestyle'],
     }),
   ]);

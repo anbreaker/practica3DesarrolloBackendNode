@@ -8,6 +8,8 @@ const uuid = require('uuid');
 
 // Initializations
 const app = express();
+
+// Conecto to Database
 require('./mongoose_database');
 
 // Settings
