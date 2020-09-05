@@ -4,8 +4,11 @@ const router = Router();
 const Advert = require('../models/Advert');
 
 router.get('/', async (req, res, next) => {
-  const advertsList = await Advert.find();
-  res.json(advertsList);
+  res.render('index');
+});
+
+router.get('/newAdvert', (req, res) => {
+  res.render('newAdvert');
 });
 
 module.exports = router;

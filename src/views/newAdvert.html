@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/header') %>
+    <title>New Book</title>
+  </head>
+  <body>
+    <%- include('partials/navigation') %>
+
+    <div class="container p-4">
+      <form method="POST" action="/new-entry" class="card card-body">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            class="form-control"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Entry the name of new Advert"
+            autofocus
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="onSale">On Sale (true or false)</label>
+          <input
+            class="form-control"
+            type="text"
+            name="onSale"
+            id="onSale"
+            placeholder="Enter the price of the advert (true or false)"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cost">Price</label>
+          <input
+            class="form-control"
+            type="number"
+            name="cost"
+            id="cost"
+            placeholder="Price"
+            autofocus
+            required
+          />
+        </div>
+        <div class="input-group mt-3 mb-3">
+          <div class="custom-file">
+            <input
+              type="file"
+              name="image"
+              class="custom-file-input"
+              id="inputGroupFile01"
+            />
+            <label for="inputGroupFile01" class="custom-file-label" data-browse="Search">
+              Choose File
+            </label>
+          </div>
+        </div>
+        <input type="submit" value="Save Book" class="btn btn-primary" />
+      </form>
+    </div>
+  </body>
+</html>
