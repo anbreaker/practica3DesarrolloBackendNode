@@ -19,7 +19,7 @@ const advertSchema = new Schema(
     },
     imagePath: {
       type: String,
-      required: true,
+      required: false,
     },
     tags: ['tecnology', 'developer', 'work', 'lifestyle'],
   },

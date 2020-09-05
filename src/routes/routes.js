@@ -11,4 +11,13 @@ router.get('/newAdvert', (req, res) => {
   res.render('newAdvert');
 });
 
+router.post('/newAdvert', async (req, res) => {
+  const {name, onSale, cost, imagePath, tags} = req.body;
+  const newAdvert = new Advert({name, onSale, cost, imagePath, tags});
+
+  await newAdvert.save();
+  // res.json({message: 'Advert Save'});
+  res.render('index');
+});
+
 module.exports = router;

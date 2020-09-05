@@ -8,7 +8,7 @@
     <%- include('partials/navigation') %>
 
     <div class="container p-4">
-      <form method="POST" action="/new-entry" class="card card-body">
+      <form method="POST" action="/newAdvert" class="card card-body">
         <div class="form-group">
           <label for="name">Name</label>
           <input
@@ -22,13 +22,15 @@
           />
         </div>
         <div class="form-group">
-          <label for="onSale">On Sale (true or false)</label>
+          <label for="onSale"
+            >On Sale === true or Searching === false(true or false ONLY)</label
+          >
           <input
             class="form-control"
             type="text"
             name="onSale"
             id="onSale"
-            placeholder="Enter the price of the advert (true or false)"
+            placeholder="Enter true To Sale or false to Search (true or false ONLY)"
             required
           />
         </div>
@@ -48,7 +50,7 @@
           <div class="custom-file">
             <input
               type="file"
-              name="image"
+              name="imagePath"
               class="custom-file-input"
               id="inputGroupFile01"
             />

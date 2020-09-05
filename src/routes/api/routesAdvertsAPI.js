@@ -8,6 +8,7 @@ router.get('/', async (req, res, next) => {
   res.json(advertsList);
 });
 
+// To send data from PostMan
 router.post('/', async (req, res) => {
   // console.log(req.body);
   const {name, onSale, cost, imagePath, tags} = req.body;
