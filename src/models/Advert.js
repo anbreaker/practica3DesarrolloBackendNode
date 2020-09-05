@@ -1,4 +1,6 @@
-const {Schema, model, mongo, Mongoose} = require('mongoose');
+'use strict';
+
+const {Schema, model} = require('mongoose');
 
 const advertSchema = Mongoose.Schema(
   {

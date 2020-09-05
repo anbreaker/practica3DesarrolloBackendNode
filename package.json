@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "fuser -k 3000/tcp & cross-env NODE_ENV=development nodemon src/app.js",
+    "dev": "fuser -k 3000/tcp & cross-env NODE_ENV=development nodemon src/index.js",
     "start": "cross-env NODE_ENV=production node src/index.js"
   },
   "repository": {

@@ -1,3 +1,5 @@
+'use strict';
+
 const express = require('express');
 const morgan = require('morgan');
 const multer = require('multer');
@@ -10,8 +12,6 @@ require('./database');
 
 // Settings
 app.set('port', process.env.PORT || 4000);
-
-console.log(process.env.PORT);
 
 // Middlewares
 app.use(morgan('dev'));
@@ -61,9 +61,6 @@ app.engine('html', require('ejs').__express);
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views')));
 
-// Start the server
-app.listen(app.get('port'), () => {
-  console.log('Server on por', app.get('port'));
-});
+// Start the server on './index.js'
 
 module.exports = app;
