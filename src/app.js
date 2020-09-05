@@ -8,7 +8,7 @@ const uuid = require('uuid');
 
 // Initializations
 const app = express();
-require('./database');
+require('./mongoose_database');
 
 // Settings
 app.set('port', process.env.PORT || 4000);

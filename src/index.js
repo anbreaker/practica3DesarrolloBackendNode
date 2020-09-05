@@ -8,7 +8,7 @@ const app = require('./app');
 
 // Start the server
 app.listen(app.get('port'), () => {
-  console.log('Envioroment: ', process.env.NODE_ENV.toUpperCase());
+  console.log('     Envioroment: ', process.env.NODE_ENV.toUpperCase());
 
   //Only to use link on terminal with ctrl+click XD
   setTimeout(() => {

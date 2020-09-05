@@ -5,11 +5,10 @@ const {Schema, model} = require('mongoose');
 const advertSchema = Mongoose.Schema(
   {
     name: {String, index: true, require: true},
-    send: {Boolean, require: true},
+    onSale: {Boolean, require: true},
     cost: {Number, require: true},
     imagePath: {String, require: true},
-    create_at: {type: Date, default: Date.now},
-    tags: ['tecnology', 'developer'],
+    tags: ['tecnology', 'developer', 'work', 'lifestyle'],
   },
   {
     // Don't create index on production!!
