@@ -13,11 +13,15 @@ require('./database');
 // Settings
 app.set('port', process.env.PORT || 4000);
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'html');
+app.engine('html', require('ejs').__express);
+
 // Middlewares
 app.use(morgan('dev'));
 
-// Middlewares multer use
-// Config Multer
+// Multer use & Config Multer (middleware)
 const storage = multer.diskStorage({
   destination: path.join(__dirname, './public/uploads'),
   filename: (req, file, callback, next) => {
@@ -52,14 +56,15 @@ app.use(express.json());
 // Routes
 app.use('/api/advert', require('./routes/routes'));
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'html');
-app.engine('html', require('ejs').__express);
-
 // Static files
 // app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'views')));
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Routes on '../src/routes/routes.js'
+app.use(require('./routes/routes'));
+
+// ----------------Como sacar esto a otro fichero...---------------
+// Handler Error on './handlerError.js'
 
 // Start the server on './index.js'
 
