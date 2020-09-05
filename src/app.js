@@ -55,18 +55,22 @@ app.use(express.urlencoded({extended: false}));
 // Config Express Data
 app.use(express.json());
 
-// Routes
-app.use('/api/advert', require('./routes/routes'));
-
 // Static files
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes on '../src/routes/routes.js'
-app.use(require('./routes/routes'));
+// Routes on './routes/routes.js' && './routes/api/routes.adverts'
+app.use('/', require('./routes/routes'));
+app.use('/api/all', require('./routes/api/routesAdvertsAPI'));
 
 // ----------------Como sacar esto a otro fichero...---------------
-// Handler Error on './handlerError.js'
+// Handler Error on './hadlerError.js'
+// require('./hadlerError.js');
+
+// 404 Handler Error
+app.use((req, res, next) => {
+  res.status(404).send('404 Not Found');
+});
 
 // Start the server on './index.js'
 

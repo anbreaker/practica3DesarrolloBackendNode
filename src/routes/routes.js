@@ -3,7 +3,7 @@ const router = Router();
 
 const Advert = require('../models/Advert');
 
-router.get('/api/advert', async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   const advertsList = await Advert.find();
   res.json(advertsList);
 });

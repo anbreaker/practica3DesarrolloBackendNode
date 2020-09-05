@@ -9,7 +9,7 @@ app.use((req, res, next) => {
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use((err, req, res, next) => {
   // console.log(err);
   if (err.array) {
     // error de validación
