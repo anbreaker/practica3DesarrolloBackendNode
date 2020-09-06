@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: Nodepop
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /api/ads:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-api-add
+      description: Obtiene la lista de anuncios
+    parameters: []
+    post:
+      summary: ''
+      operationId: post-api-ads
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ad'
+      description: Crea 1 anuncio
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ad'
+  '/api/ads/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ad'
+      operationId: get-api-ads-id
+      description: Obtiene un anuncio por su id
+    delete:
+      summary: ''
+      operationId: delete-api-ads-id
+      responses:
+        '204':
+          description: No Content
+      description: Elimina un anuncio por su id
+components:
+  schemas:
+    ad:
+      title: ad
+      type: object
+      properties:
+        _id:
+          type: string
+          readOnly: true
+        name:
+          type: string
+        onSale:
+          type: string
+        imagePath:
+          type: string
+        cost:
+          type: string
+        '':
+          type: string

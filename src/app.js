@@ -61,11 +61,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes on './routes/routes.js' && './routes/api/routes.adverts'
 app.use('/', require('./routes/routes'));
-app.use('/api/all', require('./routes/api/routesAdvertsAPI'));
-
-// ----------------Como sacar esto a otro fichero...---------------
-// Handler Error on './hadlerError.js'
-// require('./hadlerError.js');
+app.use('/api/ads', require('./routes/api/ads'));
 
 // 404 Handler Error
 app.use((req, res, next) => {

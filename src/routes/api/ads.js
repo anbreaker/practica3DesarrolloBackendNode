@@ -6,21 +6,8 @@ const Advert = require('../../models/Advert');
 router.get('/', async (req, res, next) => {
   const advertsList = await Advert.find();
 
-  let str = '';
-  for (const iterator of advertsList) {
-    str = str + iterator;
-  }
+  // Filtros
 
-  res.locals.adverts = advertsList;
-
-  // res.send(str);
-  res.render('viewAdverts');
-
-  // res.json(advertsList);
-});
-
-router.get('/json', async (req, res, next) => {
-  const advertsList = await Advert.find();
   res.json(advertsList);
 });
 
@@ -30,14 +17,19 @@ router.post('/', async (req, res) => {
   const {name, onSale, cost, imagePath, tags} = req.body;
   const newAdvert = new Advert({name, onSale, cost, imagePath, tags});
 
-  await newAdvert.save();
-  res.json({message: 'Advert Save'});
+  const advert = await newAdvert.save();
+  res.status(201).json(advert);
 });
 
 router.delete('/:id', async (req, res) => {
   // console.log(req.params.id);
-  const adverts = await Advert.findByIdAndDelete(req.params.id);
-  res.json({message: 'Advert Deleted'});
+  await Advert.findByIdAndDelete(req.params.id);
+  res.status(204).json();
+});
+
+router.get('/:id', async (req, res) => {
+  const advert = await Advert.findById(req.params.id);
+  res.json(advert);
 });
 
 module.exports = router;
