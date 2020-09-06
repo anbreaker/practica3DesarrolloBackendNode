@@ -11,9 +11,16 @@ router.get('/', async (req, res, next) => {
     str = str + iterator;
   }
 
-  // res.send(str);
-  // res.render('index');
+  res.locals.adverts = advertsList;
 
+  // res.send(str);
+  res.render('viewAdverts');
+
+  // res.json(advertsList);
+});
+
+router.get('/json', async (req, res, next) => {
+  const advertsList = await Advert.find();
   res.json(advertsList);
 });
 

@@ -24,4 +24,12 @@ router.post('/newAdvert', async (req, res) => {
   res.redirect('/api/all');
 });
 
+router.get('/delete', (req, res) => {
+  res.render('deleteAdvert');
+});
+
+router.get('/update', (req, res) => {
+  res.render('updateAdvert');
+});
+
 module.exports = router;

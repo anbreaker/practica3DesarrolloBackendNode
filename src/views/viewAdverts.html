@@ -7,7 +7,11 @@
     <%- include('partials/navigation') %>
     <div class="container p-4">
       <h1>NodePop</h1>
-      <%- include('partials/ul') %>
+
+      <% adverts.forEach(advert => { %>
+      <p><%= `${advert.name} - ${advert.onSale}` %></p>
+      <p><%= `${advert}` %></p>
+      <% }) %>
     </div>
   </body>
 </html>
