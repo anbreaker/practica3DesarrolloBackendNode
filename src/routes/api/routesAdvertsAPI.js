@@ -5,6 +5,15 @@ const Advert = require('../../models/Advert');
 
 router.get('/', async (req, res, next) => {
   const advertsList = await Advert.find();
+
+  let str = '';
+  for (const iterator of advertsList) {
+    str = str + iterator;
+  }
+
+  // res.send(str);
+  // res.render('index');
+
   res.json(advertsList);
 });
 

@@ -8,7 +8,7 @@
     <%- include('partials/navigation') %>
 
     <div class="container p-4">
-      <form method="POST" action="/newAdvert" class="card card-body">
+      <form method="POST" action="/newAdvert" class="card card-body" id="advert-form">
         <div class="form-group">
           <label for="name">Name</label>
           <input
@@ -73,7 +73,7 @@
             </label>
           </div>
         </div>
-        <input type="submit" value="Save Book" class="btn btn-primary" />
+        <input type="submit" id="advert-form" value="Save Book" class="btn btn-primary" />
       </form>
     </div>
   </body>
