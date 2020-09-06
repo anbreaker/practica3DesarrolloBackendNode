@@ -33,23 +33,23 @@ async function initAdverts() {
   console.log('Loads Adverts...');
   const result = await Advert.insertMany([
     {
-      name: 'computer',
+      name: 'Vant Pc ultraMOOVE-s',
       onSale: true,
-      cost: 789.69,
+      cost: 789,
       imagePath: 'computer.jpg',
       tags: ['tecnology', 'developer', 'work'],
     },
     {
       name: 'OnePlus 8',
       onSale: false,
-      cost: 89,
+      cost: 425,
       imagePath: 'oneplus.jpg',
       tags: ['tecnology', 'lifestyle'],
     },
     {
       name: 'NIKON D610',
       onSale: true,
-      cost: 707.99,
+      cost: 707,
       imagePath: 'nikon.jpg',
       tags: ['tecnology', 'lifestyle'],
     },

@@ -12,12 +12,16 @@ router.get('/newAdvert', (req, res) => {
 });
 
 router.post('/newAdvert', async (req, res) => {
-  const {name, onSale, cost, imagePath, tags} = req.body;
+  const {name, onSale, cost, imagePath} = req.body;
+  const tags = req.body.tags.split(' ');
+
   const newAdvert = new Advert({name, onSale, cost, imagePath, tags});
+
+  // console.log(newAdvert);
 
   await newAdvert.save();
   // res.json({message: 'Advert Save'});
-  res.render('index');
+  res.redirect('/api/all');
 });
 
 module.exports = router;
