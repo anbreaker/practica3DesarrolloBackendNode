@@ -48,4 +48,21 @@ router.get('/:id', async (req, res, next) => {
   }
 });
 
+// why??
+router.put('/:_id', async (req, res, next) => {
+  try {
+    const _id = req.params._id;
+    const advertData = req.body;
+
+    const advertSave = await Advert.findOneAndUpdate({_id}, advertData, {
+      new: true,
+      useFindAndModify: false, // To up Mongoose on the future (warning)
+    });
+
+    res.json({reusult: advertSave});
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;
