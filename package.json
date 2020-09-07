@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=development nodemon src/index.js",
     "start": "NODE_ENV=production node src/index.js",
-    "installDB": "node src/initDB.js",
+    "initDB": "node src/initDB.js",
     "docs": "widdershins --search false --language_tabs 'ruby:Ruby' --summary openApi.yaml -o docs.md"
   },
   "repository": {

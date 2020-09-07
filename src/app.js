@@ -59,8 +59,10 @@ app.use(express.json());
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes on './routes/routes.js' && './routes/api/routes.adverts'
+// Website Routes on './routes/routes.js'
 app.use('/', require('./routes/routes'));
+
+// API's Routres './routes/api/routes.adverts';
 app.use('/api/ads', require('./routes/api/ads'));
 
 // 404 Handler Error

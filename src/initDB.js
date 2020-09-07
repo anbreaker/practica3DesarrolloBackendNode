@@ -30,7 +30,7 @@ async function initAdverts() {
   await Advert.deleteMany();
 
   // Init Documents
-  console.log('Loads Adverts...');
+  console.log('Loads Adverts.');
   const result = await Advert.insertMany([
     {
       name: 'Vant Pc ultraMOOVE-s',
@@ -54,6 +54,7 @@ async function initAdverts() {
       tags: ['tecnology', 'lifestyle'],
     },
   ]);
+  console.log(`\tAds created ${result.length}.`);
 }
 
 const askUser = (ask) => {

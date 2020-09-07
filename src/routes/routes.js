@@ -1,3 +1,5 @@
+'use strict';
+
 const {Router} = require('express');
 const router = Router();
 
@@ -21,7 +23,7 @@ router.post('/newAdvert', async (req, res) => {
 
   await newAdvert.save();
   // res.json({message: 'Advert Save'});
-  res.redirect('/api/all');
+  res.redirect('/api/ads');
 });
 
 router.get('/delete', (req, res) => {
