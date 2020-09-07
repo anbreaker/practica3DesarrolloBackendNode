@@ -30,13 +30,13 @@ const advertSchema = new Schema(
 );
 
 // Static Methods
-advertSchema.statics.list = function (param, limit, skip, sort, fields) {
-  const query = Advert.find(param);
+advertSchema.statics.list = function (filter, limit, skip, sort, select) {
+  const query = Advert.find(filter);
   query.limit(limit);
   query.skip(skip);
   query.sort(sort);
-  query.fields(fields);
-  query.exec();
+  query.select(select);
+  return query.exec();
 };
 
 const Advert = model('Advert', advertSchema);
