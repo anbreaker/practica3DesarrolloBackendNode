@@ -1,28 +1,27 @@
 ---
-title: Nodepop v1.0
+title: Nodepopº v1.0
 language_tabs:
-  - ruby: Ruby
+  - javascript: javascript
 language_clients:
-  - ruby: ""
+  - javascript: ''
 toc_footers: []
 includes: []
 search: false
 highlight_theme: darkula
 headingLevel: 2
-
 ---
 
 <!-- Generator: Widdershins v4.0.1 -->
 
-<h1 id="nodepop">Nodepop v1.0</h1>
+<h1 id="nodepop-">Nodepopº v1.0</h1>
 
 > Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
 
 Base URLs:
 
-* <a href="http://localhost:3000">http://localhost:3000</a>
+- <a href="http://localhost:3000">http://localhost:3000</a>
 
-<h1 id="nodepop-default">Default</h1>
+<h1 id="nodepop--default">Default</h1>
 
 ## Your GET endpoint
 
@@ -30,31 +29,33 @@ Base URLs:
 
 > Code samples
 
-```ruby
-require 'rest-client'
-require 'json'
+```javascript
+const headers = {
+  Accept: 'application/json',
+};
 
-headers = {
-  'Accept' => 'application/json'
-}
+fetch('http://localhost:3000/api/ads/{id}', {
+  method: 'GET',
 
-result = RestClient.get 'http://localhost:3000/api/ads/{id}',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
-
+  headers: headers,
+})
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (body) {
+    console.log(body);
+  });
 ```
 
 `GET /api/ads/{id}`
 
-Obtiene un anuncio por su id
+Get an ad by with identifier (\_id)
 
 <h3 id="your-get-endpoint-parameters">Parameters</h3>
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|string|true|none|
+| Name | In   | Type   | Required | Description |
+| ---- | ---- | ------ | -------- | ----------- |
+| id   | path | string | true     | none        |
 
 > Example responses
 
@@ -62,20 +63,20 @@ Obtiene un anuncio por su id
 
 ```json
 {
-  "_id": "string",
   "name": "string",
-  "onSale": "string",
+  "onSale": true,
+  "cost": 0,
   "imagePath": "string",
-  "cost": "string",
-  "": "string"
+  "tags": ["string"],
+  "_id": "string"
 }
 ```
 
 <h3 id="your-get-endpoint-responses">Responses</h3>
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|[ad](#schemaad)|
+| Status | Meaning                                                 | Description | Schema          |
+| ------ | ------------------------------------------------------- | ----------- | --------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [ad](#schemaad) |
 
 <aside class="success">
 This operation does not require authentication
@@ -87,44 +88,56 @@ This operation does not require authentication
 
 > Code samples
 
-```ruby
-require 'rest-client'
-require 'json'
+```javascript
+const inputBody = '{
+  "name": "string",
+  "onSale": true,
+  "cost": 0,
+  "imagePath": "string",
+  "tags": [
+    "string"
+  ]
+}';
+const headers = {
+  'Content-Type':'application/json',
+  'Accept':'application/json'
+};
 
-headers = {
-  'Content-Type' => 'application/json',
-  'Accept' => 'application/json'
-}
-
-result = RestClient.post 'http://localhost:3000/api/ads',
-  params: {
-  }, headers: headers
-
-p JSON.parse(result)
+fetch('http://localhost:3000/api/ads',
+{
+  method: 'POST',
+  body: inputBody,
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
 
 ```
 
 `POST /api/ads`
 
-Crea 1 anuncio
+Create an ad
 
 > Body parameter
 
 ```json
 {
   "name": "string",
-  "onSale": "string",
+  "onSale": true,
+  "cost": 0,
   "imagePath": "string",
-  "cost": "string",
-  "": "string"
+  "tags": ["string"]
 }
 ```
 
 <h3 id="post-api-ads-parameters">Parameters</h3>
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|body|body|[ad](#schemaad)|false|none|
+| Name | In   | Type            | Required | Description |
+| ---- | ---- | --------------- | -------- | ----------- |
+| body | body | [ad](#schemaad) | false    | none        |
 
 > Example responses
 
@@ -132,20 +145,20 @@ Crea 1 anuncio
 
 ```json
 {
-  "_id": "string",
   "name": "string",
-  "onSale": "string",
+  "onSale": true,
+  "cost": 0,
   "imagePath": "string",
-  "cost": "string",
-  "": "string"
+  "tags": ["string"],
+  "_id": "string"
 }
 ```
 
 <h3 id="post-api-ads-responses">Responses</h3>
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|Created|[ad](#schemaad)|
+| Status | Meaning                                                      | Description | Schema          |
+| ------ | ------------------------------------------------------------ | ----------- | --------------- |
+| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [ad](#schemaad) |
 
 <aside class="success">
 This operation does not require authentication
@@ -157,33 +170,33 @@ This operation does not require authentication
 
 > Code samples
 
-```ruby
-require 'rest-client'
-require 'json'
-
-result = RestClient.delete 'http://localhost:3000/api/ads/{id}',
-  params: {
-  }
-
-p JSON.parse(result)
-
+```javascript
+fetch('http://localhost:3000/api/ads/{id}', {
+  method: 'DELETE',
+})
+  .then(function (res) {
+    return res.json();
+  })
+  .then(function (body) {
+    console.log(body);
+  });
 ```
 
 `DELETE /api/ads/{id}`
 
-Elimina un anuncio por su id
+Delete an ad with the identifier
 
 <h3 id="delete-api-ads-id-parameters">Parameters</h3>
 
-|Name|In|Type|Required|Description|
-|---|---|---|---|---|
-|id|path|string|true|none|
+| Name | In   | Type   | Required | Description |
+| ---- | ---- | ------ | -------- | ----------- |
+| id   | path | string | true     | none        |
 
 <h3 id="delete-api-ads-id-responses">Responses</h3>
 
-|Status|Meaning|Description|Schema|
-|---|---|---|---|
-|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|No Content|None|
+| Status | Meaning                                                         | Description | Schema |
+| ------ | --------------------------------------------------------------- | ----------- | ------ |
+| 204    | [No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5) | No Content  | None   |
 
 <aside class="success">
 This operation does not require authentication
@@ -200,26 +213,24 @@ This operation does not require authentication
 
 ```json
 {
-  "_id": "string",
   "name": "string",
-  "onSale": "string",
+  "onSale": true,
+  "cost": 0,
   "imagePath": "string",
-  "cost": "string",
-  "": "string"
+  "tags": ["string"],
+  "_id": "string"
 }
-
 ```
 
 ad
 
 ### Properties
 
-|Name|Type|Required|Restrictions|Description|
-|---|---|---|---|---|
-|_id|string|false|read-only|none|
-|name|string|false|none|none|
-|onSale|string|false|none|none|
-|imagePath|string|false|none|none|
-|cost|string|false|none|none|
-|*anonymous*|string|false|none|none|
-
+| Name      | Type     | Required | Restrictions | Description |
+| --------- | -------- | -------- | ------------ | ----------- |
+| name      | string   | false    | none         | none        |
+| onSale    | boolean  | false    | none         | none        |
+| cost      | number   | false    | none         | none        |
+| imagePath | string   | false    | none         | none        |
+| tags      | [string] | false    | none         | none        |
+| \_id      | string   | false    | read-only    | none        |

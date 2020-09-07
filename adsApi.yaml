@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Nodepop
+  title: Nodepopº
   version: '1.0'
 servers:
   - url: 'http://localhost:3000'
@@ -11,7 +11,7 @@ paths:
       tags: []
       responses: {}
       operationId: get-api-add
-      description: Obtiene la lista de anuncios
+      description: Get List of Ads
     parameters: []
     post:
       summary: ''
@@ -23,7 +23,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ad'
-      description: Crea 1 anuncio
+      description: Create an ad
       requestBody:
         content:
           application/json:
@@ -47,30 +47,32 @@ paths:
               schema:
                 $ref: '#/components/schemas/ad'
       operationId: get-api-ads-id
-      description: Obtiene un anuncio por su id
+      description: Get an ad by with identifier (_id)
     delete:
       summary: ''
       operationId: delete-api-ads-id
       responses:
         '204':
           description: No Content
-      description: Elimina un anuncio por su id
+      description: Delete an ad with the identifier
 components:
   schemas:
     ad:
       title: ad
       type: object
       properties:
-        _id:
-          type: string
-          readOnly: true
         name:
           type: string
         onSale:
-          type: string
+          type: boolean
+        cost:
+          type: number
         imagePath:
           type: string
-        cost:
+        tags:
+          type: array
+          items:
+            type: string
+        _id:
           type: string
-        '':
-          type: string
+          readOnly: true
