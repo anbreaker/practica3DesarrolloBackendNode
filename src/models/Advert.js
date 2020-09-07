@@ -1,6 +1,6 @@
 'use strict';
 
-const {Schema, model} = require('mongoose');
+const {Schema, model, Mongoose} = require('mongoose');
 
 const advertSchema = new Schema(
   {
@@ -29,4 +29,16 @@ const advertSchema = new Schema(
   }
 );
 
-module.exports = model('advert', advertSchema);
+// Static Methods
+advertSchema.statics.list = function (param, limit, skip, sort, fields) {
+  const query = Advert.find(param);
+  query.limit(limit);
+  query.skip(skip);
+  query.sort(sort);
+  query.fields(fields);
+  query.exec();
+};
+
+const Advert = model('Advert', advertSchema);
+
+module.exports = Advert;
