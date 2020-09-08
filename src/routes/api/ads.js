@@ -62,18 +62,17 @@ router.get('/', async (req, res, next) => {
 router.post(
   '/',
   (req, res, next) => {
-    console.log(req.file);
-    console.log(req.body);
     next();
   },
   multerMiddleware.single('image'),
   async (req, res, next) => {
-    console.log(req.files, '<----------');
+    console.log(req.file, '<----------');
 
     try {
       const {name, onSale, cost, tags} = req.body;
-      const {imagePaht} = req.file;
-      const newAdvert = new Advert({name, onSale, cost, imagePaht, tags});
+      const {image} = req.file.filename;
+      console.log(req.file.filename);
+      const newAdvert = new Advert({name, onSale, cost, image, tags});
 
       const advert = await newAdvert.save();
       res.status(201).json(advert);
