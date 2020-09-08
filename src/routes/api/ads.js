@@ -10,7 +10,7 @@ const Advert = require('../../models/Advert');
 
 // Multer use & Config Multer (middleware)
 const storage = multer.diskStorage({
-  destination: path.join(__dirname, './public/uploads'),
+  destination: path.join(__dirname, '../../public/uploads'),
   filename: (req, file, callback, next) => {
     callback(null, uuid.v4() + path.extname(file.originalname));
   },
@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
 
 const multerMiddleware = multer({
   storage,
-  dest: path.join(__dirname, './public/uploads'),
+  dest: path.join(__dirname, '../../public/uploads'),
   limits: {fileSize: 1000000},
   fileFilter: (req, file, callback) => {
     const filetypes = /jpeg|jpg|png|gif/;
@@ -30,7 +30,7 @@ const multerMiddleware = multer({
       callback('The file must be an image with the extension: jpeg | jpg | png | gif');
     }
   },
-}).single('image');
+});
 
 router.get('/', async (req, res, next) => {
   // Preparar el error handler... para uso de next
@@ -59,17 +59,29 @@ router.get('/', async (req, res, next) => {
 });
 
 // To send data from PostMan
-router.post('/', multerMiddleware, async (req, res, next) => {
-  try {
-    const {name, onSale, cost, imagePath, tags} = req.body;
-    const newAdvert = new Advert({name, onSale, cost, imagePath, tags});
+router.post(
+  '/',
+  (req, res, next) => {
+    console.log(req.file);
+    console.log(req.body);
+    next();
+  },
+  multerMiddleware.single('image'),
+  async (req, res, next) => {
+    const ver = req.body.imagePath;
+    console.log(ver, '<----------');
 
-    const advert = await newAdvert.save();
-    res.status(201).json(advert);
-  } catch (error) {
-    next(error);
+    try {
+      const {name, onSale, cost, imagePath, tags} = req.body;
+      const newAdvert = new Advert({name, onSale, cost, imagePath, tags});
+
+      const advert = await newAdvert.save();
+      res.status(201).json(advert);
+    } catch (error) {
+      next(error);
+    }
   }
-});
+);
 
 router.delete('/:id', async (req, res, next) => {
   try {

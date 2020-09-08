@@ -1,15 +1,8 @@
 'use stric';
 
 const createError = require('http-errors');
-const app = require('./app');
 
-// catch 404 and forward to error handler
-app.use((req, res, next) => {
-  next(createError(404));
-});
-
-// error handler
-app.use((err, req, res, next) => {
+module.exports.InternalServerError = (err, req, res, next) => {
   // console.log(err);
   if (err.array) {
     // error de validación
@@ -32,4 +25,4 @@ app.use((err, req, res, next) => {
 
   // render the error page
   res.render('error');
-});
+};
