@@ -22,13 +22,12 @@ app.engine('html', require('ejs').__express);
 app.use(morgan('dev'));
 
 // Form sends data, understand it, but not accept images etc...(Method of Express)
-// app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 
 // Config Express Data
 app.use(express.json());
 
 // Static files
-// app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Website Routes on './routes/routes.js'

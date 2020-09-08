@@ -68,12 +68,12 @@ router.post(
   },
   multerMiddleware.single('image'),
   async (req, res, next) => {
-    const ver = req.body.imagePath;
-    console.log(ver, '<----------');
+    console.log(req.files, '<----------');
 
     try {
-      const {name, onSale, cost, imagePath, tags} = req.body;
-      const newAdvert = new Advert({name, onSale, cost, imagePath, tags});
+      const {name, onSale, cost, tags} = req.body;
+      const {imagePaht} = req.file;
+      const newAdvert = new Advert({name, onSale, cost, imagePaht, tags});
 
       const advert = await newAdvert.save();
       res.status(201).json(advert);
