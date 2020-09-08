@@ -2,6 +2,11 @@
 
 const createError = require('http-errors');
 
+// catch 404 and forward to error handler
+module.exports.notFound = (req, res, next) => {
+  next(createError(404));
+};
+
 module.exports.InternalServerError = (err, req, res, next) => {
   // console.log(err);
   if (err.array) {

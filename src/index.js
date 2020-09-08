@@ -13,5 +13,5 @@ const server = app.listen(app.get('port'), () => {
   //Only to use link on terminal with ctrl+click XD
   setTimeout(() => {
     console.log(`Server on Port: http://127.0.0.1:${app.get('port')}`);
-  }, 10);
+  }, 100);
 });

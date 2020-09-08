@@ -38,11 +38,12 @@ app.use('/', require('./routes/routes'));
 app.use('/api/ads', require('./routes/api/ads'));
 
 // 404 Handler Error
-app.use((req, res, next) => {
-  res.status(404).send('404 Not Found');
-});
+// app.use((req, res, next) => {
+//   res.status(404).send('404 Not Found');
+// });
+app.use(require('./handlerError').notFound);
 
-app.use(require('./hadlerError').InternalServerError);
+app.use(require('./handlerError').InternalServerError);
 
 // Start the server on './index.js'
 
