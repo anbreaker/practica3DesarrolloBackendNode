@@ -5,6 +5,10 @@ require('dotenv').config();
 const readline = require('readline');
 const conn = require('./mongoose_database');
 const Advert = require('./models/Advert');
+const fs = require('fs-extra'); //fs with Promise implement
+
+const jsonAdverts = fs.readFile('src/db.json', 'utf-8');
+const ads = JSON.parse(jsonAdverts);
 
 conn.once('open', async () => {
   try {
@@ -31,29 +35,7 @@ async function initAdverts() {
 
   // Init Documents
   console.log('Loads Adverts.');
-  const result = await Advert.insertMany([
-    {
-      name: 'Vant Pc ultraMOOVE-s',
-      onSale: true,
-      cost: 789,
-      imagePath: 'src/public/vant.png',
-      tags: ['tecnology', 'developer', 'work'],
-    },
-    {
-      name: 'OnePlus 8',
-      onSale: false,
-      cost: 425,
-      imagePath: 'src/public/oneplus.png',
-      tags: ['tecnology', 'lifestyle'],
-    },
-    {
-      name: 'NIKON D610',
-      onSale: true,
-      cost: 707,
-      imagePath: 'src/public/nikon.png',
-      tags: ['tecnology', 'lifestyle'],
-    },
-  ]);
+  const result = await Advert.insertMany(ads);
   console.log(`\tAds created ${result.length}.`);
 }
 

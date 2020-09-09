@@ -1,0 +1,63 @@
+[
+  {
+    "tags": [
+      "tecnology",
+      "developer",
+      "work"
+    ],
+    "_id": "5f5912fbb1828432bd7a162f",
+    "name": "Vant Pc ultraMOOVE-s",
+    "onSale": true,
+    "cost": 789,
+    "imagePath": "src/public/vant.png",
+    "__v": 0
+  },
+  {
+    "tags": [
+      "tecnology",
+      "lifestyle"
+    ],
+    "_id": "5f5912fbb1828432bd7a1630",
+    "name": "OnePlus 8",
+    "onSale": false,
+    "cost": 425,
+    "imagePath": "src/public/oneplus.png",
+    "__v": 0
+  },
+  {
+    "tags": [
+      "tecnology",
+      "lifestyle"
+    ],
+    "_id": "5f5912fbb1828432bd7a1631",
+    "name": "NIKON D610",
+    "onSale": true,
+    "cost": 707,
+    "imagePath": "src/public/nikon.png",
+    "__v": 0
+  },
+  {
+    "tags": [
+      "work",
+      "developer"
+    ],
+    "_id": "5f5917f2aa4d152eb763077a",
+    "name": "Advert Number 4",
+    "onSale": true,
+    "cost": 123,
+    "imagePath": "/src/public/uploads/582fa012-5905-4199-8a93-6cb8426dd02e.png",
+    "__v": 0
+  },
+  {
+    "tags": [
+      "work",
+      "developer"
+    ],
+    "_id": "5f591c30682b993bb1327d0e",
+    "name": "Advert Number 5",
+    "onSale": false,
+    "cost": 252,
+    "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
+    "__v": 0
+  }
+]
