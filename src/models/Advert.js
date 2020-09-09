@@ -1,6 +1,6 @@
 'use strict';
 
-const {Schema, model, Mongoose} = require('mongoose');
+const {Schema, model} = require('mongoose');
 
 const advertSchema = new Schema(
   {
@@ -19,7 +19,7 @@ const advertSchema = new Schema(
     },
     imagePath: {
       type: String,
-      required: false,
+      required: true,
     },
     tags: ['tecnology', 'developer', 'work', 'lifestyle'],
   },

@@ -9,19 +9,19 @@ router.get('/', async (req, res, next) => {
   res.render('index');
 });
 
-router.get('/newAdvert', (req, res) => {
-  res.render('newAdvert');
+router.get('/newAd', (req, res) => {
+  res.render('newAd');
 });
 
-router.post('/newAdvert', async (req, res) => {
-  const {name, onSale, cost, imagePath} = req.body;
+router.post('/newAd', async (req, res) => {
+  const {name, onSale, imagePath, cost} = req.body;
   const tags = req.body.tags.split(' ');
+
+  // ¿Como guardo la ruta de la imagen que subo y xq no se guarda en la carpeta?
 
   const newAdvert = new Advert({name, onSale, cost, imagePath, tags});
 
-  // console.log(newAdvert);
-
-  await newAdvert.save();
+  const advert = await newAdvert.save();
   // res.json({message: 'Advert Save'});
   res.redirect('/api/ads');
 });
