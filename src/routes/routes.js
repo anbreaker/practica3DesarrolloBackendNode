@@ -5,8 +5,16 @@ const router = Router();
 
 const Advert = require('../models/Advert');
 
+// Como presentar los datos en index.html........
+
 router.get('/', async (req, res, next) => {
-  res.render('index');
+  try {
+    const adverts = await Advert.find();
+    res.render('index', {adverts});
+    // res.json(adverts);
+  } catch (error) {
+    next(error);
+  }
 });
 
 router.get('/newAd', (req, res) => {

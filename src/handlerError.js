@@ -13,7 +13,7 @@ module.exports.InternalServerError = (err, req, res, next) => {
     // error de validación
     err.status = 422;
     const errInfo = err.array({onlyFirstError: true})[0];
-    err.message = `El parámetro ${errInfo.param} ${errInfo.msg}`;
+    err.message = `Param ${errInfo.param} ${errInfo.msg}`;
   }
 
   res.status(err.status || 500);

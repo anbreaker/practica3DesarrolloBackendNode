@@ -3,6 +3,11 @@
   <head>
     <%- include('partials/header') %>
   </head>
+  <style>
+    .center {
+      text-align: center;
+    }
+  </style>
   <body>
     <%- include('partials/navigation') %>
     <div class="container p-4">
@@ -10,6 +15,26 @@
       <!-- 
         <%- include('partials/ul') %>
       -->
+      <table id="tabel" border="1">
+        <tbody>
+          <tr class="center">
+            <td width="300"><h4>Adverts:</h4></td>
+            <td width="100"><h4>On Sale</h4></td>
+            <td width="80"><h4>Cost</h4></td>
+            <td width="325"><h4>_id:</h4></td>
+            <td width="480"><h4>Path</h4></td>
+          </tr>
+          <% adverts.forEach(advert => { %>
+          <tr>
+            <td><%= `${advert.name}` %></td>
+            <td class="center"><%= `${advert.onSale}` %></td>
+            <td class="center"><%= `${advert.cost}` %></td>
+            <td><%= `${advert._id}` %></td>
+            <td><%= `${advert.imagePath}` %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>

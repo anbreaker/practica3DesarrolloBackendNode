@@ -6,8 +6,6 @@ const multerMiddlewareUploads = require('../../lib/multerMiddleware');
 const Advert = require('../../models/Advert');
 
 router.get('/', async (req, res, next) => {
-  // Preparar el error handler... para uso de next
-
   try {
     // Filters:
     const filter = {};
