@@ -50,11 +50,45 @@
   },
   {
     "tags": [
-      "work",
-      "developer"
+      "lifestyle",
+      "tecnology"
+    ],
+    "_id": "5f591c30482b993bb1327d0e",
+    "name": "Advert Number 5",
+    "onSale": false,
+    "cost": 252,
+    "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
+    "__v": 0
+  },
+  {
+    "tags": [
+      "lifestyle"
     ],
     "_id": "5f591c30682b993bb1327d0e",
-    "name": "Advert Number 5",
+    "name": "Advert Number 6",
+    "onSale": false,
+    "cost": 252,
+    "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
+    "__v": 0
+  },
+  {
+    "tags": [
+      "work",
+      "tecnology"
+    ],
+    "_id": "5f591c30682c993bb1327d0e",
+    "name": "Advert Number 7",
+    "onSale": false,
+    "cost": 252,
+    "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
+    "__v": 0
+  },
+  {
+    "tags": [
+      "developer"
+    ],
+    "_id": "5f591c30682b993bb1427d0e",
+    "name": "Advert Number 8",
     "onSale": false,
     "cost": 252,
     "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
