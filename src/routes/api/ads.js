@@ -15,7 +15,14 @@ router.get('/', async (req, res, next) => {
     if (req.query.imagePath) filter.imagePath = req.query.imagePath;
     if (req.query.tags) filter.tags = {$all: req.query.tags};
 
-    // Filter $l
+    // Filter $lt:
+    const splittedCost = req.query.cost.split('-');
+    console.log(splittedCost);
+    if (splittedCost.lengh === 2) {
+      console.log('ver');
+    }
+
+    if (req.query.cost) filter.cost = {$lte: req.query.cost};
 
     const limit = parseInt(req.query.limit || 10);
     const skip = parseInt(req.query.skip || 0);
