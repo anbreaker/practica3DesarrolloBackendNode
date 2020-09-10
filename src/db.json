@@ -1,10 +1,6 @@
 [
   {
-    "tags": [
-      "tecnology",
-      "developer",
-      "work"
-    ],
+    "tags": ["technology", "developer", "work"],
     "_id": "5f5912fbb1828432bd7a162f",
     "name": "Vant Pc ultraMOOVE-s",
     "onSale": true,
@@ -13,10 +9,7 @@
     "__v": 0
   },
   {
-    "tags": [
-      "tecnology",
-      "lifestyle"
-    ],
+    "tags": ["technology", "lifestyle"],
     "_id": "5f5912fbb1828432bd7a1630",
     "name": "OnePlus 8",
     "onSale": false,
@@ -25,10 +18,7 @@
     "__v": 0
   },
   {
-    "tags": [
-      "tecnology",
-      "lifestyle"
-    ],
+    "tags": ["technology", "lifestyle"],
     "_id": "5f5912fbb1828432bd7a1631",
     "name": "NIKON D610",
     "onSale": true,
@@ -37,10 +27,7 @@
     "__v": 0
   },
   {
-    "tags": [
-      "work",
-      "developer"
-    ],
+    "tags": ["work", "developer"],
     "_id": "5f5917f2aa4d152eb763077a",
     "name": "Advert Number 4",
     "onSale": true,
@@ -49,10 +36,7 @@
     "__v": 0
   },
   {
-    "tags": [
-      "lifestyle",
-      "tecnology"
-    ],
+    "tags": ["lifestyle", "technology"],
     "_id": "5f591c30482b993bb1327d0e",
     "name": "Advert Number 5",
     "onSale": false,
@@ -61,9 +45,7 @@
     "__v": 0
   },
   {
-    "tags": [
-      "lifestyle"
-    ],
+    "tags": ["lifestyle"],
     "_id": "5f591c30682b993bb1327d0e",
     "name": "Advert Number 6",
     "onSale": true,
@@ -72,10 +54,7 @@
     "__v": 0
   },
   {
-    "tags": [
-      "work",
-      "tecnology"
-    ],
+    "tags": ["work", "technology"],
     "_id": "5f591c30682c993bb1327d0e",
     "name": "Advert Number 7",
     "onSale": false,
@@ -84,9 +63,7 @@
     "__v": 0
   },
   {
-    "tags": [
-      "developer"
-    ],
+    "tags": ["developer"],
     "_id": "5f591c30682b993bb1427d0e",
     "name": "Advert Number 8",
     "onSale": true,
