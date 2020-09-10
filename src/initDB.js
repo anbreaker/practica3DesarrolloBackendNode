@@ -7,7 +7,7 @@ const conn = require('./mongoose_database');
 const Advert = require('./models/Advert');
 const fs = require('fs-extra'); //fs with Promise implement
 
-const jsonAdverts = fs.readFile('src/db.json', 'utf-8');
+const jsonAdverts = fs.readFileSync('src/db.json', 'utf-8');
 const ads = JSON.parse(jsonAdverts);
 
 conn.once('open', async () => {
@@ -30,11 +30,11 @@ conn.once('open', async () => {
 
 async function initAdverts() {
   // Delet database
-  console.log('Delete Adverts');
+  console.log('Delete all Adverts');
   await Advert.deleteMany();
 
   // Init Documents
-  console.log('Loads Adverts.');
+  console.log('Loads initial Database Adverts.');
   const result = await Advert.insertMany(ads);
   console.log(`\tAds created ${result.length}.`);
 }
