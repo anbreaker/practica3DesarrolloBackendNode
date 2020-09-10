@@ -8,7 +8,7 @@ const path = require('path');
 const app = express();
 
 // Conecto to Database
-require('./mongoose_database');
+require('./mongooseDatabase');
 
 // Settings
 app.set('port', process.env.PORT || 4000);
@@ -40,9 +40,8 @@ app.use('/api/ads', require('./routes/api/ads'));
 // app.use((req, res, next) => {
 //   res.status(404).send('404 Not Found');
 // });
-app.use(require('./handlerError').notFound);
-
-app.use(require('./handlerError').InternalServerError);
+app.use(require('./lib/handlerError').notFound);
+app.use(require('./lib/handlerError').InternalServerError);
 
 // Start the server on './index.js'
 
