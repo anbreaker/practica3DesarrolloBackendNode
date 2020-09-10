@@ -66,7 +66,7 @@
     ],
     "_id": "5f591c30682b993bb1327d0e",
     "name": "Advert Number 6",
-    "onSale": false,
+    "onSale": true,
     "cost": 252,
     "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
@@ -89,7 +89,7 @@
     ],
     "_id": "5f591c30682b993bb1427d0e",
     "name": "Advert Number 8",
-    "onSale": false,
+    "onSale": true,
     "cost": 252,
     "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
