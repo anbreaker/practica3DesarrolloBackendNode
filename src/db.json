@@ -1,6 +1,10 @@
 [
   {
-    "tags": ["technology", "developer", "work"],
+    "tags": [
+      "technology",
+      "developer",
+      "work"
+    ],
     "_id": "5f5912fbb1828432bd7a162f",
     "name": "Vant Pc ultraMOOVE-s",
     "onSale": true,
@@ -9,7 +13,10 @@
     "__v": 0
   },
   {
-    "tags": ["technology", "lifestyle"],
+    "tags": [
+      "technology",
+      "lifestyle"
+    ],
     "_id": "5f5912fbb1828432bd7a1630",
     "name": "OnePlus 8",
     "onSale": false,
@@ -18,7 +25,10 @@
     "__v": 0
   },
   {
-    "tags": ["technology", "lifestyle"],
+    "tags": [
+      "technology",
+      "lifestyle"
+    ],
     "_id": "5f5912fbb1828432bd7a1631",
     "name": "NIKON D610",
     "onSale": true,
@@ -27,47 +37,60 @@
     "__v": 0
   },
   {
-    "tags": ["work", "developer"],
+    "tags": [
+      "work",
+      "developer"
+    ],
     "_id": "5f5917f2aa4d152eb763077a",
     "name": "Advert Number 4",
     "onSale": true,
-    "cost": 123,
+    "cost": 400,
     "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
   },
   {
-    "tags": ["lifestyle", "technology"],
+    "tags": [
+      "lifestyle",
+      "technology"
+    ],
     "_id": "5f591c30482b993bb1327d0e",
     "name": "Advert Number 5",
     "onSale": false,
-    "cost": 252,
+    "cost": 500,
     "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
   },
   {
-    "tags": ["lifestyle"],
+    "tags": [
+      "lifestyle"
+    ],
     "_id": "5f591c30682b993bb1327d0e",
     "name": "Advert Number 6",
     "onSale": true,
-    "cost": 252,
+    "cost": 600,
     "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
   },
   {
-    "tags": ["work", "technology"],
+    "tags": [
+      "work",
+      "technology"
+    ],
     "_id": "5f591c30682c993bb1327d0e",
     "name": "Advert Number 7",
     "onSale": false,
-    "cost": 252,
+    "cost": 700,
     "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
   },
   {
-    "tags": ["developer"],
+    "tags": [
+      "developer"
+    ],
     "_id": "5f591c30682b993bb1427d0e",
     "name": "Advert Number 8",
     "onSale": true,
-    "cost": 252,
+    "cost": 800,
     "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
   }

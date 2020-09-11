@@ -12,27 +12,9 @@ router.get('/', async (req, res, next) => {
     const filter = {};
     if (req.query.name) filter.name = req.query.name;
     if (req.query.onSale) filter.onSale = req.query.onSale;
-    if (req.query.cost) filter.cost = req.query.cost;
     if (req.query.imagePath) filter.imagePath = req.query.imagePath;
     if (req.query.tags) filter.tags = {$all: req.query.tags};
-
-    // Filter $lte, $gte:
-
-    const splittedCost = req.query.cost.split('-');
-    console.log(splittedCost, splittedCost[0], splittedCost[1], '<----ver');
-
-    if (splittedCost.length === 2) {
-      if (splittedCost[0] !== '' && splittedCost[1] !== '') {
-        console.log(splittedCost[0], splittedCost[1]);
-        filter.cost = {$gte: splittedCost[0], $lte: splittedCost[0]};
-      }
-
-      if (splittedCost[1] === '') filter.cost = {$gte: splittedCost[0]};
-      if (splittedCost[1] !== '') filter.cost = {$lte: splittedCost[1]};
-    } else {
-      console.log('En el else');
-      if (req.query.cost) filter.cost = splittedCost;
-    }
+    if (req.query.cost) filter.cost = filterCost(req.query.cost);
 
     const limit = parseInt(req.query.limit || 10);
     const skip = parseInt(req.query.skip || 0);
@@ -101,5 +83,18 @@ router.patch('/:id', async (req, res, next) => {
     next(error);
   }
 });
+
+const filterCost = (param) => {
+  const splittedCost = param.split('-');
+
+  if (splittedCost.length === 2) {
+    if (splittedCost[0] !== '' && splittedCost[1] !== '')
+      return {$gte: splittedCost[0], $lte: splittedCost[1]};
+    if (splittedCost[0] !== '' && splittedCost[1] === '') return {$gte: splittedCost[0]};
+    if (splittedCost[0] === '' && splittedCost[1] !== '') return {$lte: splittedCost[1]};
+  } else {
+    return splittedCost;
+  }
+};
 
 module.exports = router;
