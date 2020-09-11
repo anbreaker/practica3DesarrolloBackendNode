@@ -4,6 +4,7 @@ const {Router} = require('express');
 const router = Router();
 const multerMiddlewareUploads = require('../../lib/multerMiddleware');
 const Advert = require('../../models/Advert');
+const {exists} = require('../../models/Advert');
 
 router.get('/', async (req, res, next) => {
   try {
@@ -16,12 +17,22 @@ router.get('/', async (req, res, next) => {
     if (req.query.tags) filter.tags = {$all: req.query.tags};
 
     // Filter $lte, $gte:
-    const splittedCost = req.query.cost.split('-');
-    if (splittedCost.length === 2) {
-      if (splittedCost[1] === '') filter.cost = {$lte: req.query.cost};
-    }
 
-    if (req.query.cost) filter.cost = {$lte: req.query.cost};
+    const splittedCost = req.query.cost.split('-');
+    console.log(splittedCost, splittedCost[0], splittedCost[1], '<----ver');
+
+    if (splittedCost.length === 2) {
+      if (splittedCost[0] !== '' && splittedCost[1] !== '') {
+        console.log(splittedCost[0], splittedCost[1]);
+        filter.cost = {$gte: splittedCost[0], $lte: splittedCost[0]};
+      }
+
+      if (splittedCost[1] === '') filter.cost = {$gte: splittedCost[0]};
+      if (splittedCost[1] !== '') filter.cost = {$lte: splittedCost[1]};
+    } else {
+      console.log('En el else');
+      if (req.query.cost) filter.cost = splittedCost;
+    }
 
     const limit = parseInt(req.query.limit || 10);
     const skip = parseInt(req.query.skip || 0);
