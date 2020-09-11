@@ -8,9 +8,9 @@ const {exists} = require('../../models/Advert');
 
 router.get('/', async (req, res, next) => {
   try {
-    // Filters:
     const filter = {};
-    if (req.query.name) filter.name = req.query.name;
+    // if (req.query.name) filter.name = req.query.name;
+    if (req.query.name) filter.name = {$regex: '^' + `${req.query.name}`};
     if (req.query.onSale) filter.onSale = req.query.onSale;
     if (req.query.imagePath) filter.imagePath = req.query.imagePath;
     if (req.query.tags) filter.tags = {$all: req.query.tags};

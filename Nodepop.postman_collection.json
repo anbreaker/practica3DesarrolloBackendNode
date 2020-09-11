@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "c483d4a8-f01c-4592-b901-c417d5a58295",
+		"name": "Nodepop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Ad with JSON",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n      \"name\": \"test1\",\n      \"onSale\": true,\n      \"cost\": 707,\n      \"imagePath\": \"src/public/test1.png\",\n      \"tags\": [\"tecnology\", \"lifestyle\"]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/ads",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Ads",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/ads/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Ad",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/ads/5f58fb3dbb209815ae651419",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads",
+						"5f58fb3dbb209815ae651419"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Ad",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/ads/5f591c30682b993bb1327d0e?name=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads",
+						"5f591c30682b993bb1327d0e"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ad",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/ads/5f58fb3dbb209815ae65141a",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads",
+						"5f58fb3dbb209815ae65141a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Ad with form-data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test Imagen",
+							"type": "text"
+						},
+						{
+							"key": "onSale",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "cost",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/anbreaker/Escritorio/practica3DesarrolloBackendNode/src/public/nikon.jpg"
+						},
+						{
+							"key": "tags",
+							"value": "work",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "developer",
+							"type": "text"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/ads",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ads by Filters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/ads/?name=Ad",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads",
+						""
+					],
+					"query": [
+						{
+							"key": "tags",
+							"value": "technology",
+							"disabled": true
+						},
+						{
+							"key": "tags",
+							"value": "lifestyle",
+							"disabled": true
+						},
+						{
+							"key": "onSale",
+							"value": "true",
+							"disabled": true
+						},
+						{
+							"key": "cost",
+							"value": "700-",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Ad"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ads by Cost",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/ads/?cost=500-925",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ads",
+						""
+					],
+					"query": [
+						{
+							"key": "cost",
+							"value": "500-925"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

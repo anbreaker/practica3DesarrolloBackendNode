@@ -9,7 +9,7 @@
     "name": "Vant Pc ultraMOOVE-s",
     "onSale": true,
     "cost": 789,
-    "imagePath": "src/public/vant.png",
+    "imagePath": "vant.png",
     "__v": 0
   },
   {
@@ -21,7 +21,7 @@
     "name": "OnePlus 8",
     "onSale": false,
     "cost": 425,
-    "imagePath": "src/public/oneplus.png",
+    "imagePath": "oneplus.png",
     "__v": 0
   },
   {
@@ -30,10 +30,10 @@
       "lifestyle"
     ],
     "_id": "5f5912fbb1828432bd7a1631",
-    "name": "NIKON D610",
+    "name": "Nikon D610",
     "onSale": true,
     "cost": 707,
-    "imagePath": "src/public/nikon.png",
+    "imagePath": "nikon.png",
     "__v": 0
   },
   {
@@ -45,7 +45,7 @@
     "name": "Advert Number 4",
     "onSale": true,
     "cost": 400,
-    "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
+    "imagePath": "d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
   },
   {
@@ -57,7 +57,7 @@
     "name": "Advert Number 5",
     "onSale": false,
     "cost": 500,
-    "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
+    "imagePath": "d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
   },
   {
@@ -68,7 +68,7 @@
     "name": "Advert Number 6",
     "onSale": true,
     "cost": 600,
-    "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
+    "imagePath": "d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
   },
   {
@@ -80,7 +80,7 @@
     "name": "Advert Number 7",
     "onSale": false,
     "cost": 700,
-    "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
+    "imagePath": "d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
   },
   {
@@ -91,7 +91,7 @@
     "name": "Advert Number 8",
     "onSale": true,
     "cost": 800,
-    "imagePath": "/src/public/uploads/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
+    "imagePath": "d1d50271-4b0a-4909-8a9f-b5ad48998d38.png",
     "__v": 0
   }
 ]
