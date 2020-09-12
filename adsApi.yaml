@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: NodePop
+  title: Nodepopº
   version: '1.0'
 servers:
   - url: 'http://localhost:3000'
