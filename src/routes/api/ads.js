@@ -4,7 +4,6 @@ const {Router} = require('express');
 const router = Router();
 const multerMiddlewareUploads = require('../../lib/multerMiddleware');
 const Advert = require('../../models/Advert');
-const {exists} = require('../../models/Advert');
 
 router.get('/', async (req, res, next) => {
   try {
