@@ -59,6 +59,10 @@ npm run start
 
 - Postman: https://www.getpostman.com/collections/60f54fb4d346d7f4ebc0
 
+## Api Documentation with Postman
+
+- Postman API DOCs: - Postman: https://documenter.getpostman.com/view/12623471/TVCjvk79
+
 ## Author
 
 👤 **Francisco Javier Antúnez Durán aka anbreaker**
