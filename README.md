@@ -19,39 +19,52 @@
 
 ### 🏠 [Homepage](https://github.com/anbreaker/practica3DesarrolloBackendNode#readme)
 
-## Install
+## Install all dependencies
 
 ```sh
-npm i
+npm install
 ```
 
-## Usage
+## To start a initial DataBase:
+
+```sh
+npm run initDB -->(Option y (yes))
+```
+
+## To use mode development
+
+```sh
+npm run dev
+```
+
+## To deploy on a server
 
 ```sh
 npm run start
 ```
 
+## Postman Model
+
+- Postman: https://www.getpostman.com/collections/60f54fb4d346d7f4ebc0
+
 ## Author
 
-👤 **anbreaker**
+👤 **Francisco Javier Antúnez Durán aka anbreaker**
 
-* Website: https://rootdevs.es/
-* Twitter: [@antunez19](https://twitter.com/antunez19)
-* Github: [@anbreaker](https://github.com/anbreaker)
-* LinkedIn: [@https:\/\/www.linkedin.com\/in\/francisco-javier-antunez-duran\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/francisco-javier-antunez-duran\/)
+- Website: https://rootdevs.es/
+- Twitter: [@antunez19](https://twitter.com/antunez19)
+- Github: [@anbreaker](https://github.com/anbreaker)
+- LinkedIn: [@https:\/\/www.linkedin.com\/in\/francisco-javier-antunez-duran\/](https://linkedin.com/in/https://www.linkedin.com/in/francisco-javier-antunez-duran/)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/anbreaker/practica3DesarrolloBackendNode/issues). You can also take a look at the [contributing guide](https://github.com/anbreaker/practica3DesarrolloBackendNode/blob/master/CONTRIBUTING.md).
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
 Copyright © 2020 [anbreaker](https://github.com/anbreaker).<br />
 This project is [ISC](https://github.com/anbreaker/practica3DesarrolloBackendNode/blob/master/LICENSE) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
