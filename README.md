@@ -31,15 +31,17 @@ git clone https://github.com/anbreaker/practica3DesarrolloBackendNode.git
 npm install
 ```
 
+## To environment variables .env see Example, (and created this file '.env'):
+
+- Copy DotEnvExample to .env and review the settings.
+
 ## To start a initial DataBase:
 
 ```sh
-npm run initDB -->(Option y (yes))
+npm run initDB
 ```
 
-## To configure .env see Example, (and created this file '.env'):
-
-- DotEnvExample
+- **Warning! this script delete database contents before the load. -->(Option 'y / n' (yes/no))**
 
 ## To use mode development
 

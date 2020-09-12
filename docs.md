@@ -3,12 +3,13 @@ title: Nodepopº v1.0
 language_tabs:
   - javascript: javascript
 language_clients:
-  - javascript: ''
+  - javascript: ""
 toc_footers: []
 includes: []
 search: false
 highlight_theme: darkula
 headingLevel: 2
+
 ---
 
 <!-- Generator: Widdershins v4.0.1 -->
@@ -19,7 +20,7 @@ headingLevel: 2
 
 Base URLs:
 
-- <a href="http://localhost:3000">http://localhost:3000</a>
+* <a href="http://localhost:3000">http://localhost:3000</a>
 
 <h1 id="nodepop--default">Default</h1>
 
@@ -30,32 +31,34 @@ Base URLs:
 > Code samples
 
 ```javascript
+
 const headers = {
-  Accept: 'application/json',
+  'Accept':'application/json'
 };
 
-fetch('http://localhost:3000/api/ads/{id}', {
+fetch('http://localhost:3000/api/ads/{id}',
+{
   method: 'GET',
 
-  headers: headers,
+  headers: headers
 })
-  .then(function (res) {
+.then(function(res) {
     return res.json();
-  })
-  .then(function (body) {
+}).then(function(body) {
     console.log(body);
-  });
+});
+
 ```
 
 `GET /api/ads/{id}`
 
-Get an ad by with identifier (\_id)
+Get an ad by with identifier (_id)
 
 <h3 id="your-get-endpoint-parameters">Parameters</h3>
 
-| Name | In   | Type   | Required | Description |
-| ---- | ---- | ------ | -------- | ----------- |
-| id   | path | string | true     | none        |
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string|true|none|
 
 > Example responses
 
@@ -67,16 +70,18 @@ Get an ad by with identifier (\_id)
   "onSale": true,
   "cost": 0,
   "imagePath": "string",
-  "tags": ["string"],
+  "tags": [
+    "string"
+  ],
   "_id": "string"
 }
 ```
 
 <h3 id="your-get-endpoint-responses">Responses</h3>
 
-| Status | Meaning                                                 | Description | Schema          |
-| ------ | ------------------------------------------------------- | ----------- | --------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | OK          | [ad](#schemaad) |
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|OK|[ad](#schemaad)|
 
 <aside class="success">
 This operation does not require authentication
@@ -129,15 +134,17 @@ Create an ad
   "onSale": true,
   "cost": 0,
   "imagePath": "string",
-  "tags": ["string"]
+  "tags": [
+    "string"
+  ]
 }
 ```
 
 <h3 id="post-api-ads-parameters">Parameters</h3>
 
-| Name | In   | Type            | Required | Description |
-| ---- | ---- | --------------- | -------- | ----------- |
-| body | body | [ad](#schemaad) | false    | none        |
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|body|body|[ad](#schemaad)|false|none|
 
 > Example responses
 
@@ -149,16 +156,18 @@ Create an ad
   "onSale": true,
   "cost": 0,
   "imagePath": "string",
-  "tags": ["string"],
+  "tags": [
+    "string"
+  ],
   "_id": "string"
 }
 ```
 
 <h3 id="post-api-ads-responses">Responses</h3>
 
-| Status | Meaning                                                      | Description | Schema          |
-| ------ | ------------------------------------------------------------ | ----------- | --------------- |
-| 201    | [Created](https://tools.ietf.org/html/rfc7231#section-6.3.2) | Created     | [ad](#schemaad) |
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|201|[Created](https://tools.ietf.org/html/rfc7231#section-6.3.2)|Created|[ad](#schemaad)|
 
 <aside class="success">
 This operation does not require authentication
@@ -171,15 +180,18 @@ This operation does not require authentication
 > Code samples
 
 ```javascript
-fetch('http://localhost:3000/api/ads/{id}', {
-  method: 'DELETE',
+
+fetch('http://localhost:3000/api/ads/{id}',
+{
+  method: 'DELETE'
+
 })
-  .then(function (res) {
+.then(function(res) {
     return res.json();
-  })
-  .then(function (body) {
+}).then(function(body) {
     console.log(body);
-  });
+});
+
 ```
 
 `DELETE /api/ads/{id}`
@@ -188,15 +200,15 @@ Delete an ad with the identifier
 
 <h3 id="delete-api-ads-id-parameters">Parameters</h3>
 
-| Name | In   | Type   | Required | Description |
-| ---- | ---- | ------ | -------- | ----------- |
-| id   | path | string | true     | none        |
+|Name|In|Type|Required|Description|
+|---|---|---|---|---|
+|id|path|string|true|none|
 
 <h3 id="delete-api-ads-id-responses">Responses</h3>
 
-| Status | Meaning                                                         | Description | Schema |
-| ------ | --------------------------------------------------------------- | ----------- | ------ |
-| 204    | [No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5) | No Content  | None   |
+|Status|Meaning|Description|Schema|
+|---|---|---|---|
+|204|[No Content](https://tools.ietf.org/html/rfc7231#section-6.3.5)|No Content|None|
 
 <aside class="success">
 This operation does not require authentication
@@ -217,20 +229,24 @@ This operation does not require authentication
   "onSale": true,
   "cost": 0,
   "imagePath": "string",
-  "tags": ["string"],
+  "tags": [
+    "string"
+  ],
   "_id": "string"
 }
+
 ```
 
 ad
 
 ### Properties
 
-| Name      | Type     | Required | Restrictions | Description |
-| --------- | -------- | -------- | ------------ | ----------- |
-| name      | string   | false    | none         | none        |
-| onSale    | boolean  | false    | none         | none        |
-| cost      | number   | false    | none         | none        |
-| imagePath | string   | false    | none         | none        |
-| tags      | [string] | false    | none         | none        |
-| \_id      | string   | false    | read-only    | none        |
+|Name|Type|Required|Restrictions|Description|
+|---|---|---|---|---|
+|name|string|false|none|none|
+|onSale|boolean|false|none|none|
+|cost|number|false|none|none|
+|imagePath|string|false|none|none|
+|tags|[string]|false|none|none|
+|_id|string|false|read-only|none|
+

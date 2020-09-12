@@ -5,7 +5,7 @@ info:
 servers:
   - url: 'http://localhost:3000'
 paths:
-  /api/ads:
+  /api/ads/:
     get:
       summary: Your GET endpoint
       tags: []
@@ -20,7 +20,7 @@ paths:
         '201':
           description: Created
           content:
-            application/json:
+            multipart/form-data:
               schema:
                 $ref: '#/components/schemas/ad'
       description: Create an ad
@@ -29,6 +29,14 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ad'
+    patch:
+      summary: Upload Ad
+      operationId: patch-api-ads
+      responses:
+        '201':
+          description: Created
+      parameters: []
+      description: Updload ad by _id.
   '/api/ads/{id}':
     parameters:
       - schema:
@@ -76,3 +84,9 @@ components:
         _id:
           type: string
           readOnly: true
+      required:
+        - name
+        - onSale
+        - cost
+        - imagePath
+      x-examples: {}
