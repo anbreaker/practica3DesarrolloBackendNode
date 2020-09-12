@@ -61,7 +61,9 @@ npm run start
 
 ## Api Documentation with Postman
 
-- Postman API DOCs: - Postman: https://documenter.getpostman.com/view/12623471/TVCjvk79
+- Postman API DOCs: - https://documenter.getpostman.com/view/12623471/TVCjvk79
+
+- Example use on Youtube: - https://youtu.be/vz7IFUYBquk
 
 ## Author
 
