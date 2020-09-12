@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Website Routes on './routes/routes.js'
 app.use('/', require('./routes/routes'));
 
-// API's Routres './routes/api/routes.adverts';
+// API's Routes './routes/api/routes.adverts';
 app.use('/api/ads', require('./routes/api/ads'));
 
 // 404 Handler Error
