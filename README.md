@@ -63,7 +63,7 @@ npm run start
 
 - Postman API DOCs: - https://documenter.getpostman.com/view/12623471/TVCjvk79
 
-## Para ver en youtube un ejemplo (click en la imagen)
+## To see an example on youtube (click on the image)
 
 [![](https://raw.githubusercontent.com/anbreaker/practica3DesarrolloBackendNode/master/src/public/d1d50271-4b0a-4909-8a9f-b5ad48998d38.png)](https://www.youtube.com/watch?v=Yyr5W96fnrs&feature=youtu.be")
 
