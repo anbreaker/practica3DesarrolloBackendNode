@@ -63,7 +63,7 @@ npm run start
 
 - Postman API DOCs: - https://documenter.getpostman.com/view/12623471/TVCjvk79
 
-- Example use on Youtube: - https://youtu.be/vz7IFUYBquk
+- Example use on Youtube: - https://youtu.be/Yyr5W96fnrs
 
 ## Author
 
