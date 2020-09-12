@@ -15,6 +15,9 @@ router.get('/', async (req, res, next) => {
   }
 });
 
+/*
+// Continue
+
 router.get('/newAd', (req, res) => {
   res.render('newAd');
 });
@@ -39,5 +42,6 @@ router.get('/delete', (req, res) => {
 router.get('/update', (req, res) => {
   res.render('updateAdvert');
 });
+*/
 
 module.exports = router;
