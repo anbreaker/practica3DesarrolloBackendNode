@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Practica 3 Desarrollo Backend Node (API) KEEPCODING 👋</h1>
+<h1 align="center">Practica 3 Desarrollo Backend Node (API) KEEPCODING 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/anbreaker/practica3DesarrolloBackendNode#readme" target="_blank">
@@ -19,6 +19,12 @@
 
 ### 🏠 [Homepage](https://github.com/anbreaker/practica3DesarrolloBackendNode#readme)
 
+## Clone Repo
+
+```sh
+git clone https://github.com/anbreaker/practica3DesarrolloBackendNode.git
+```
+
 ## Install all dependencies
 
 ```sh
@@ -30,6 +36,10 @@ npm install
 ```sh
 npm run initDB -->(Option y (yes))
 ```
+
+## To configure .env see Example, (and created this file '.env'):
+
+- DotEnvExample
 
 ## To use mode development
 
