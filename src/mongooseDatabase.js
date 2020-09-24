@@ -10,15 +10,15 @@ mongoose
     useUnifiedTopology: true,
     useCreateIndex: true,
   })
-  .then((db) => console.log('DB is conneted an create on', db.connection.host))
+  .then((db) => console.log(`DB is connected an create on ${db.connection.host}`))
   .catch((error) => console.error(error));
 
 mongoose.connection.on('open', () => {
-  console.log('Conectado a MongoDB en', mongoose.connection.name);
+  console.log(`Connected to MongoDB on Database: ${mongoose.connection.name}`);
 });
 
 mongoose.connection.on('error', (err) => {
-  console.log('Error de conexión', err);
+  console.log('Error conexion', err);
   process.exit(1);
 });
 
