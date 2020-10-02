@@ -74,7 +74,7 @@ npm run start
 - Website: https://rootdevs.es/
 - Twitter: [@antunez19](https://twitter.com/antunez19)
 - Github: [@anbreaker](https://github.com/anbreaker)
-- LinkedIn: [@https:\/\/www.linkedin.com\/in\/francisco-javier-antunez-duran\/](https://linkedin.com/in/https://www.linkedin.com/in/francisco-javier-antunez-duran/)
+- LinkedIn: [@https:\/\/www.linkedin.com\/in\/francisco-javier-antunez-duran\/](https://www.linkedin.com/in/francisco-javier-antunez-duran/)
 
 ## 🤝 Contributing
 
